@@ -9,6 +9,7 @@
     "pages/device-list/device-goods/device-goods",
     "pages/goods-list-device/goods-list-device",
     "pages/device-list/device-change/device-change",
+    "pages/product-delivery-list/product-delivery-list",
     "pages/mine/device-record/device-record",
     "pages/mine/device-detail/device-detail",
     "pages/mine/shop-record/shop-record",
@@ -31,7 +32,7 @@
       },
       {
         "pagePath":"pages/device-list/device-list",
-        "text":"补货",
+        "text":"配送单",
         "iconPath":"images/nav/navIcon2.png",
         "selectedIconPath":"images/nav/navIcon2_s.png"
       },

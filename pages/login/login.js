@@ -42,6 +42,7 @@ Page({
 			console.log('userInfo',res);
 			app.globalData.userId = res.value.id;
 			app.globalData.token = res.value.token;
+			app.globalData.userInfo = res.value;
 			app.globalData.userlogin = true;
 			wx.setStorageSync('userId', res.value.id);
 			wx.setStorageSync('userlogin', true);
@@ -53,7 +54,7 @@ Page({
 			})
 			setTimeout(function() {
 				wx.switchTab({
-				  url: '/pages/shop-list/shop-list'
+				  url: '/pages/product-list/product-list'
 				})
 			}, 2000);
 		}).catch(error=>{

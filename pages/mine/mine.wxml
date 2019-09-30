@@ -30,10 +30,9 @@
 			<view class="wrap-content-inner">
 				<view class="user-info">
 					<view class="user-image">
-						<image mode="widthFix" src="{{wxUserInfo.avatarUrl ? wxUserInfo.avatarUrl : '/images/index/profile.png'}}"></image>
+						<image mode="widthFix" src="/images/index/profile.png"></image>
 					</view>
-					<view class="shop-name">店铺名称:小王川菜馆</view>
-					<view class="user-name">账号:{{userInfo.name}}</view>
+					<view class="shop-name">账户名称:{{userInfo.name}}</view>
 				</view>
 				<view class="user-item-list">
 					<view class="user-item">
@@ -41,7 +40,7 @@
 							<view class="item-icon item-icon1">
 								<image mode="widthFix" src="/images/index/buhuoIcon.png"></image>
 							</view>
-							<view class="item-name">我的补货记录</view>
+							<view class="item-name">我的历史选货单</view>
 							<image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
 						</navigator>
 					</view>
@@ -50,25 +49,13 @@
 							<view class="item-icon item-icon2">
 								<image mode="widthFix" src="/images/index/collectionIcon.png"></image>
 							</view>
-							<view class="item-name">我的收餐记录</view>
+							<view class="item-name">选货统计</view>
 							<image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
 						</navigator>
 					</view>
 				</view>
 			</view>
 		</view>
-		
-		
-		<authorize-dialog id="authorizeDialog"
-			title="{{dialogTitle}}"
-			logo="{{logoImg}}"
-			dialogText="{{dialogText}}"
-			authorizeItem="{{authorizeItem}}"
-			rejectText="{{rejectText}}"
-			confirmText="{{confirmText}}"
-			bindonload="onload"
-			bindgetUserInfo = "getWxUserInfo"
-			isShow="{{isShow}}"></authorize-dialog>
 	</view>
 
 </view>

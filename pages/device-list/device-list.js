@@ -1,6 +1,4 @@
 //logs.js
-const app = getApp()
-const util = require('../../utils/util.js')
 var request = require('../../utils/network/request.js');
 var api = require('../../utils/network/config.js').api;
 
@@ -16,27 +14,23 @@ Page({
 	  this.getDevicesList();
   },
   getDevicesList:function(){
-	var supply_id = app.globalData.userInfo.id;
   	var that = this;
-  	 var ajaxData = {
-  		  supply_id:supply_id
-  	 }
+	var ajaxData = {
+		startTime:'2019-09-11',
+		endTime:'2019-09-17'
+	}
   	request.fetch({
-  		url:api.listDevicesBySuppierId,
-  		data:ajaxData,
-  		method:'GET'
-  	  }).then(res=>{
-  		console.log(res)
-  		var data = res;
-  		data.forEach((item,index)=>{
-  			item.device_image_url = app.globalData.imageUrlPath + item.device_image_url
-  		})
-  		that.setData({
-  			devicesList: [{name:'王耀'}],
-			remind:''
-  		})
-  	  }).catch(error=>{
-  		
-  	  })
+	  url:api.getDeliveryItems,
+	  data:ajaxData
+	}).then(res=>{
+	console.log(res)
+	var data = res.value;
+	that.setData({
+	  devicesList: data,
+	  remind:''
+	})
+	}).catch(error=>{
+	
+	})
   },
 })

@@ -23,34 +23,8 @@ Page({
 		})
 	},
 	onLoad: function() {
-		var that = this;
-		//查看是否授权
-		wxApi('getSetting').then(res => {
-			if (!res.authSetting['scope.userInfo']) { //没有授权
-				console.log('没有授权')
-				that.setData({
-					isShow: true
-				})
-			} else { //用户已经授权 则可以直接调用getUserInfo获取头像昵称
-				that.setData({
-					isShow: false
-				})
-				wxApi('getUserInfo').then(res => {
-					console.log('res', res);
-					that.setData({
-						wxUserInfo:res.userInfo
-					})
-				}).catch(err => {
-					console.log('err', err);
-				})
-
-			}
-		})
 		this.getUserInfo();
 	},
-	/* getWxUserInfo:function(e){  //判断用户点击的是哪个
-	  console.log('getWxUserInfo',e)
-  }, */
 	getUserInfo: function(e) {
 		var userInfo = app.globalData.userInfo;
 		console.log(userInfo)
