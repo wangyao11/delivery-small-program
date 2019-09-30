@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="body" wx:if="{{remind}}">
+		<view class='zong'>
+			<view class="spinner">
+				<view class="spinner-container container1">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container2">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container3">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:else>
+		<view class="operator-btns">
+			<view class="btn-cancle" bindtap="cancleRevGoods"><image class="btn-image" mode="widthFix" src="/images/index/noIcon.png"></image>取消补货</view>
+			<view class="btn-confirm" bindtap="deviceGoods"><image class="btn-image" mode="widthFix" src="/images/index/yesIcon.png"></image>补货完成</view>
+		</view>
+		<view class="scroll-view">
+			<scroll-view scroll-y style="height: 100%" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+			  <view class="shop-list">
+					<block wx:for="{{deviceGoodList}}">
+						<view class="shop-item-outer">
+							<view class="shop-item clearfix">
+								<view class="shop-item-image">
+									<image class="goods-image2" src="{{item.goods.thumb_img}}"></image><!-- mode="widthFix" --> 
+									<view class="machine-name">{{item.scale_no}}号货道</view>
+								</view>
+								<view class="shop-item-info">
+									<view class="shop-item-top">
+										<view class="shop-name">{{item.goods.name}}</view>
+										<view class="shop-location common-width-text"><text>重量：</text>{{item.weight}}g</view>
+										<view class="shop-location common-width-text margin-around"><text>偏移量：</text><input data-id="{{item.id}}" data-name="offset" bindinput="handleInput" type="number" value="{{item.offset}}" class="change-input" />g</view>
+										<view class="shop-location common-width-text"><text>价格：</text><input data-id="{{item.id}}" data-name="price" bindinput="handleInput" value="{{item.price}}" type="text" class="change-input" />元/件</view>
+										<view class="shop-status common-width-text"><text>数量：</text><count-number bindcallChangeCount="callChangeCount" count="{{item.quatity}}"
+										 data-id="{{item.id}}"></count-number></view>
+									</view>
+								</view>
+							</view>
+							<view class="shop-item-bot">
+								
+								<view class="shop-item-link">
+									<navigator class="red-button link-btn" url="/pages/goods-list-device/goods-list-device?scale_no={{item.scale_no}}" hover-class="none">更换</navigator>
+								</view>
+							</view>
+						</view>
+					</block>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+	
+  
+</view>

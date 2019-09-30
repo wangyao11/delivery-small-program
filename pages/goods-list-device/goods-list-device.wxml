@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="body" wx:if="{{remind}}">
+		<view class='zong'>
+			<view class="spinner">
+				<view class="spinner-container container1">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container2">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container3">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:else>
+		<view class="scroll-view">
+			<scroll-view scroll-y style="height: 100%" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+			  <view class="shop-list">
+					<block wx:for="{{goodsList}}">
+						<view class="shop-item clearfix">
+							<image class="goods-image" src="{{item.thumb_img}}"></image> <!-- mode="widthFix" -->
+							<view class="shop-item-info">
+								<view class="shop-item-top">
+									<view class="shop-name">{{item.name}}</view>
+									<view class="shop-location">类型：{{item.category.name}}</view>
+									<view class="shop-location">重量：{{item.weight}}g</view>
+									<view class="shop-location">价格：{{item.price}}元</view>
+								</view>
+								<view class="shop-item-bottom">
+									<view class="red-button link-btn" bindtap="chooseGood" data-item="{{item}}" data-good-id="{{item.id}}">选择</view>
+								</view>
+							</view>
+						</view>
+					</block>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+	
+  
+</view>

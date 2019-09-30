@@ -1,0 +1,24 @@
+<!--授权登录弹框.wxml-->
+<view class="wrap-dialog" wx:if="{{isShow}}">
+	<view class="dialog-mask"></view>
+	<view class="dialog-container">
+		<view class="dialog-title">{{title}}</view>
+		<view class="dialog-content">
+			<view class="project-info">
+				<image class="warn-image" wx:if="{{logo === 'warnIcon.png'}}" mode="widthFix" src="/images/login/warnIcon.png"></image>
+				<image class="projectImage" wx:else mode="widthFix" src="/images/login/{{logo}}"></image>
+				<view class="dialog-text">{{dialogText}}</view>
+			</view>
+			<view class="dialog-tips">
+				<view class="tips-item">
+					<view class="grey-dot"></view>
+					<view class="tips-detail">{{authorizeItem}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="dialog-footer">
+			<button class="dialog-btn grey-btn" bindtap="rejectEvent">{{rejectText}}</button>
+			<button class="dialog-btn red-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">{{confirmText}}</button>
+		</view>
+	</view>
+</view>

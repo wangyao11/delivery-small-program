@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="body" wx:if="{{remind}}">
+		<view class='zong'>
+			<view class="spinner">
+				<view class="spinner-container container1">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container2">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container3">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:else>
+		<scroll-view scroll-y style="height: 100%;">
+			<view class="block-group">
+				<view class="block-group-title">店铺信息</view>
+				<view class="block-group-item">店铺名称：{{shopInfo.shop.name}}</view>
+				<view class="block-group-item">店铺位置：{{shopInfo.shop.city + shopInfo.shop.area + shopInfo.shop.address}}</view>
+			</view>
+			<view class="block-group">
+				<view class="block-group-title">收餐信息</view>
+				<view class="block-group-item">收餐数量：{{shopInfo.recv_quatity}}</view>
+				<view class="block-group-item">收餐时间：{{shopInfo.recv_at}}</view>
+			</view>
+			<block wx:for="{{shopInfo.shop_recv_details}}" wx:key="{{index}}">
+				<view class="block-media clearfix">
+						<view class="block-media-image">
+							<image class="goods-image2" src="{{item.goods.thumb_img}}"></image>
+						</view>
+						<view class="block-media-info">
+							<view class="media-info-title">{{item.goods.name}}</view>
+							<view class="media-info-text">价格：¥{{item.goods.price}}</view>
+							<view class="media-info-text">数量：{{item.quatity}}份</view>
+						</view>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	
+</view>

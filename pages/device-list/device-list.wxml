@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="body" wx:if="{{remind}}">
+		<view class='zong'>
+			<view class="spinner">
+				<view class="spinner-container container1">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container2">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container3">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:else>
+		<scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"
+		 scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+			<view class="shop-list">
+				<block wx:for="{{devicesList}}">
+					<view class="shop-item clearfix">
+							<image class="goods-image" src="{{item.device_image_url}}"></image><!-- mode="widthFix" -->
+							<view class="shop-item-info">
+								<view class="shop-item-top">
+									<view class="shop-name">{{item.name}}</view>
+									<view class="shop-location">位置：{{item.city + item.address}}</view>
+									<!-- <view class="shop-status">库存：20</view> -->
+									<view class="shop-status">状态：{{item.status == 0?'未补货':'已补货'}}</view>
+								</view>
+								<view class="shop-item-bottom">
+									<navigator class="blue-button link-btn" url="/pages/device-list/device-goods/device-goods?device_id={{item.device_id}}" hover-class="none">补货</navigator>
+								</view>
+							</view>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+	</view>
+
+</view>

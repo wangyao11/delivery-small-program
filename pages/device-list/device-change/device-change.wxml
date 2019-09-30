@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="scroll-view">
+		<scroll-view scroll-y style="height: 100%" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+		  <view class="shop-list">
+				<block wx:for="{{shopList}}">
+					<view class="shop-item-outer">
+						<view class="shop-item">
+							<view class="shop-image-area">
+								<image class="shop-image" mode="widthFix" src="http://placehold.it/100x100"></image>
+								<view class="choose-btn">选择</view>
+							</view>
+							<view class="shop-item-info">
+								<view class="shop-item-top">
+									<view class="shop-name">红烧肉</view>
+									<view class="shop-location common-width-text"><text>运营商：</text>南山</view>
+									<view class="shop-location common-width-text"><text>品牌：</text>了约</view>
+									<view class="shop-location common-width-text"><text>类型：</text>湘菜</view>
+									<view class="shop-location common-width-text"><text>重量：</text>350g</view>
+									<view class="shop-location common-width-text margin-around"><text>偏移量：</text><input type="number" class="change-input" />g</view>
+									<view class="shop-location common-width-text"><text>单价：</text><input type="text" class="change-input" />元/件</view>
+									<view class="tips">(该商品单价应该在11.02-15.03之间)</view>
+									<view class="shop-status common-width-text"><text>数量：</text><count-number></count-number></view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+	</view>
+  
+</view>

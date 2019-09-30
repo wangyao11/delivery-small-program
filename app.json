@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/product-list/product-list",
+    "pages/shop-list/shop-list",
+    "pages/device-list/device-list",
+    "pages/mine/mine",
+    "pages/shop-list/shop-goods/shop-goods",
+    "pages/goods-list/goods-list",
+    "pages/device-list/device-goods/device-goods",
+    "pages/goods-list-device/goods-list-device",
+    "pages/device-list/device-change/device-change",
+    "pages/mine/device-record/device-record",
+    "pages/mine/device-detail/device-detail",
+    "pages/mine/shop-record/shop-record",
+    "pages/mine/shop-detail/shop-detail",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbfafa",
+    "navigationBarTitleText": "配送小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/product-list/product-list",
+        "text":"菜品",
+        "iconPath":"images/nav/navIcon1.png",
+        "selectedIconPath":"images/nav/navIcon1_s.png"
+      },
+      {
+        "pagePath":"pages/device-list/device-list",
+        "text":"补货",
+        "iconPath":"images/nav/navIcon2.png",
+        "selectedIconPath":"images/nav/navIcon2_s.png"
+      },
+      {
+        "pagePath":"pages/mine/mine",
+        "text":"我的",
+        "iconPath":"images/nav/navIcon3.png",
+        "selectedIconPath":"images/nav/navIcon3_s.png"
+      }
+    ],
+    "color":"#666",
+    "selectedColor":"#fd8003"
+  },
+  "sitemapLocation": "sitemap.json"
+}

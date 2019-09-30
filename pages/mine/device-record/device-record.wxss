@@ -1,0 +1,72 @@
+/**index.wxss**/
+page {
+	width:100%;
+	height: 100%;
+}
+.container {
+	height: 100%;
+}
+.header-nav {
+	/* padding:0 20rpx; */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom:2rpx solid #7693ff;
+	
+}
+.nav-item {
+	text-align: center;
+	font-size: 26rpx;
+	color:#333333;
+	flex: 1;
+	height: 80rpx;
+	line-height: 80rpx;
+	
+}
+.nav-item-active {
+	border-bottom:6rpx solid #7693ff;
+}
+
+.swiper-content {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+
+
+
+.shop-list {
+	width:100%;
+}
+.shop-item {
+	padding:20rpx 24rpx;
+	border-bottom:2rpx solid #eee;
+	position: relative;
+}
+.shop-item:last-child {
+	/* border-bottom: 0; */
+}
+.shop-item-top {
+	/* padding-top:10rpx; */
+}
+.item-text {
+	font-size: 28rpx;
+	color:#666;
+}
+.shop-item-right {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	right:24rpx;
+	bottom:28rpx;
+}
+.shop-item-right .link-btn {
+	width:128rpx;
+}
+
+.swiper-box {
+	height: 100%;
+}

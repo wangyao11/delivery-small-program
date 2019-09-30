@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="body" wx:if="{{remind}}">
+		<view class='zong'>
+			<view class="spinner">
+				<view class="spinner-container container1">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container2">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+				<view class="spinner-container container3">
+					<view class="circle1"></view>
+					<view class="circle2"></view>
+					<view class="circle3"></view>
+					<view class="circle4"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:else>
+		<view class="operator-btns">
+			<view class="btn-cancle" bindtap="cancleRevGoods">
+				<image class="btn-image" mode="widthFix" src="/images/index/noIcon.png"></image>取消收餐
+			</view>
+			<view class="btn-confirm" bindtap="shopGoods">
+				<image class="btn-image" mode="widthFix" src="/images/index/yesIcon.png"></image>收餐完成
+			</view>
+		</view>
+		<view class="scroll-view">
+			<scroll-view scroll-y style="height: 100%" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"
+			 scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+				<view class="shop-list">
+					<block wx:for="{{shopGoodList}}">
+						<view class="shop-item clearfix">
+							<image class="goods-image" src="{{item.thumb_img}}"></image>
+							<view class="shop-item-info">
+								<view class="shop-item-top">
+									<view class="shop-name">{{item.name}}</view>
+									<view class="shop-location">重量：{{item.weight}}g</view>
+									<view class="shop-status">数量：<count-number bindcallChangeCount="callChangeCount" count="{{item.count}}"
+										 data-id="{{item.id}}"></count-number>
+									</view>
+									<view class="shop-location">价格：{{item.price}}元</view>
+								</view>
+								<view class="shop-item-bottom">
+									<view class="red-button link-btn" data-id="{{item.id}}" bindtap="deleteGood">删除</view>
+								</view>
+							</view>
+						</view>
+					</block>
+				</view>
+				<view class="add-item-area">
+					<navigator url="/pages/goods-list/goods-list" hover-class="none">
+						<view class="add-item-btn">
+							<image class="add-image" mode="widthFix" src="/images/index/addIcon.png"></image>
+							添加商品
+						</view>
+					</navigator>
+
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+
+
+</view>

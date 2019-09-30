@@ -1,0 +1,128 @@
+/**index.wxss**/
+page {
+  height: 100%;
+  width:100%;
+	background-color: #eeeeee;
+} 
+.container {
+	padding-top: 200rpx;
+}
+.background {
+  width:100%;
+  position: fixed;
+  z-index: -1;
+  top:0;
+}
+.logo {
+	width:160rpx;
+	height: 160rpx;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius:20rpx;
+	overflow: hidden;
+	margin:0 auto;
+	margin-bottom:160rpx;
+}
+.logoImage {
+	width:100%;
+}
+
+.wrap-login {
+	padding:0 32rpx;
+}
+.login-form {
+	width:100%;
+	padding:22rpx 32rpx 100rpx;
+	background-color: #fff;
+	display: block;
+	box-sizing: border-box;
+	border-radius: 8rpx;
+	box-shadow: 0px 10rpx 20rpx #eee;
+	
+}
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.section__title {
+	width:52rpx;
+	height: 52rpx;
+	border:2rpx solid #888;
+	border-radius:50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.phone-icon {
+	width:22rpx;
+}
+.psd-icon {
+	width:22rpx;
+}
+.eye-icon {
+	width:32rpx;
+}
+.eye-icon-close {
+	width:32rpx;
+}
+.phone-input {
+	flex: 1;
+	padding-left:24rpx;
+	font-size: 30rpx;
+	color:#333333;
+	height: 50rpx;
+	line-height: 48rpx;
+}
+.section_gap {
+	padding:20rpx 10rpx;
+	border-bottom:2rpx solid #ddd;
+}
+.margin-top {
+	margin-top:12rpx;
+}
+.button-area {
+	margin-top:100rpx;
+}
+.button {
+	width:400rpx;
+	height: 100rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius:100rpx;
+	border:none;
+	outline: none;
+	overflow: hidden;
+	background-color: transparent;
+	font-size: 34rpx;
+	color:#fff;
+	background: linear-gradient(to right,#ff8355,#fe592f);
+	box-shadow: 0px 8rpx 10rpx #ffcdc0;
+}
+.button::after {
+ border:0;
+}
+.login-tips {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom:40rpx;
+	left:0;
+	right:0;
+}
+.qeustionImage {
+	width:40rpx;
+}
+.login-tips text {
+	font-size: 26rpx;
+	color:#999999;
+}
+.section__btn {
+	padding:0 8rpx;
+	display: flex;
+	align-items: center;
+}

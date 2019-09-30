@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+		"count-number":"../../../components/count-number/count-number"
+	},
+	"navigationBarTitleText":"设备补货"
+}

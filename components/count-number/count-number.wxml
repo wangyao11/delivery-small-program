@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="wrap-count">
+	<view type="number" data-tar="minus" bindtap="tapBtn">
+		<image wx:if="{{count > 1}}" class="count-image" mode="widthFix" src="/images/index/minusIcon.png"></image>
+		<image wx:else class="count-image" mode="widthFix" src="/images/index/minusDisabled.png"></image>
+	</view>
+	<input type="number" bindinput="inputHandle" bindblur="blurHandle" value="{{count}}" />
+	<view bindtap="tapBtn" data-tar="plus">
+		<image class="count-image" mode="widthFix" src="/images/index/plusIcon.png"></image>
+	</view>
+</view>

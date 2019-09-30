@@ -1,0 +1,46 @@
+/**index.wxss**/
+page {
+	width:100%;
+	height: 100%;
+}
+.container {
+	height: 100%;
+}
+
+.block-group {
+	padding:28rpx 24rpx;
+	font-size: 28rpx;
+	border-bottom:2rpx solid #efefef;
+}
+.block-group-title {
+	color:#333333;
+	margin-bottom:10rpx;
+	font-weight: 500;
+	font-size: 30rpx;
+}
+.block-group-item {
+	color:#666666;
+}
+.block-media {
+	display: flex;
+	padding:28rpx 24rpx;
+	border-bottom:2rpx solid #efefef;
+}
+.block-media-image {
+	text-align: center;
+	margin-right:28rpx;
+	color:#333333;
+	font-size: 24rpx;
+	float: left;
+}
+.block-media-info {
+	font-size: 26rpx;
+	color:#333;
+}
+.media-info-title {
+	font-weight: 500;
+	margin-bottom:10rpx;
+}
+.media-info-text {
+	color:#666666;
+}
