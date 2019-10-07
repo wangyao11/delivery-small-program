@@ -40,10 +40,11 @@ Page({
 			data:ajaxData
 		}).then(res=>{
 			console.log('userInfo',res);
-			app.globalData.userId = res.value.id;
+			
 			app.globalData.token = res.value.token;
 			app.globalData.userInfo = res.value;
 			app.globalData.userlogin = true;
+      app.globalData.userId = res.value.id;
 			wx.setStorageSync('userId', res.value.id);
 			wx.setStorageSync('userlogin', true);
 			wx.setStorageSync('token', res.value.token);
@@ -54,7 +55,7 @@ Page({
 			})
 			setTimeout(function() {
 				wx.switchTab({
-				  url: '/pages/product-list/product-list'
+          url: '/pages/device-list/device-list'
 				})
 			}, 2000);
 		}).catch(error=>{

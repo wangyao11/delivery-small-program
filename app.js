@@ -63,9 +63,10 @@ App({
   },
   globalData: {
     userInfo: wx.getStorageSync('userInfo'),
-	userlogin:wx.getStorageSync('userlogin'),
-	wxUserInfo:wx.getStorageSync('wxUserInfo'),
-	imageUrlPath:'http://47.99.169.112:8501/storage/'
+    userlogin:wx.getStorageSync('userlogin'),
+    userId:wx.getStorageSync('userId'),
+	  wxUserInfo:wx.getStorageSync('wxUserInfo'),
+	  imageUrlPath:'http://47.99.169.112:8501/storage/'
   },
   redirect: function (url, param) {
     wx.navigateTo({

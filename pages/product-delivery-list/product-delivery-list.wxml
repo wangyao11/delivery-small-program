@@ -21,6 +21,9 @@
               <view class='goods-info'>
                 <text class='goodsName'>{{goods.name}}</text>
               </view>
+              <view class="shop-status">数量：<count-number bindcallChangeCount="callChangeCount" count="{{item.count}}"
+										 data-id="{{item.id}}"></count-number>
+              </view>
             </view>
           </block>
         </block>

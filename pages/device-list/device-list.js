@@ -1,4 +1,5 @@
 //logs.js
+const app = getApp();
 var request = require('../../utils/network/request.js');
 var api = require('../../utils/network/config.js').api;
 
@@ -11,6 +12,13 @@ Page({
     
   },
   onShow:function(){
+    console.log(app.globalData.userlogin)
+    if (app.globalData.userlogin == '') {
+      wx.redirectTo({
+        url: '/pages/login/login'
+      })
+      return false;
+    }
 	  this.getDevicesList();
   },
   getDevicesList:function(){

@@ -9,6 +9,7 @@ const api = {
 	getProductClassList:'/wechat/product/getClasslist',
 	getProductList:'/wechat/product/list',
 	getDeliveryItems:'/wechat/deliveryItem/list',
+	addProductToDelivery:'/wechat/deliveryUserProduct/add',
 	userInfo:'/api/userInfo',
 	listShopsBySuppierId:'/api/listShopsBySuppierId', //根据补货员获取列表店铺
 	shopRecvRecords:'/api/shopRecvRecords', //店铺收餐

@@ -32,11 +32,10 @@
 					<view class="shop-item clearfix">
 							<view class="shop-item-info">
 								<view class="shop-item-top">
-									<view class="shop-name">{{item.dateTime}}</view>
-									<view class="shop-location">{{item.remark}}</view>
+									<view class="shop-name">{{item.dateTime}}-{{item.remark}}</view>
 								</view>
 								<view class="shop-item-bottom">
-									<navigator class="blue-button link-btn" url="/pages/product-delivery-list/product-delivery-list?device_id={{item.device_id}}" hover-class="none">选货</navigator>
+									<navigator class="blue-button link-btn" url="/pages/goods/goods?deliveryId={{item.id}}" hover-class="none">选货</navigator>
 								</view>
 							</view>
 					</view>
