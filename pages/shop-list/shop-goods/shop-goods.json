@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-		"count-number":"../../../components/count-number/count-number"
-	},
-	"navigationBarTitleText":"店铺收餐"
-}

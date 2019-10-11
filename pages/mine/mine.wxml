@@ -36,20 +36,11 @@
 				</view>
 				<view class="user-item-list">
 					<view class="user-item">
-						<navigator class="user-item-link" url="/pages/mine/device-record/device-record" hover-class="none">
+						<navigator class="user-item-link" url="/pages/mine/history-delivery-item/history-delivery-item" hover-class="none">
 							<view class="item-icon item-icon1">
 								<image mode="widthFix" src="/images/index/buhuoIcon.png"></image>
 							</view>
 							<view class="item-name">我的历史选货单</view>
-							<image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
-						</navigator>
-					</view>
-					<view class="user-item">
-						<navigator class="user-item-link" url="/pages/mine/shop-record/shop-record" hover-class="none">
-							<view class="item-icon item-icon2">
-								<image mode="widthFix" src="/images/index/collectionIcon.png"></image>
-							</view>
-							<view class="item-name">选货统计</view>
 							<image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
 						</navigator>
 					</view>

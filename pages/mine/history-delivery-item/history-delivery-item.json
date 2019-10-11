@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+	  "authorize-dialog":"/components/authorize-dialog/authorize-dialog"
+  },
+	"navigationBarTitleText":"历史配货单",
+	"navigationBarBackgroundColor":"#fd8003",
+    "navigationBarTextStyle": "white"
+}

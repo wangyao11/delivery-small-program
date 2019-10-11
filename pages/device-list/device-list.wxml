@@ -29,18 +29,17 @@
 		 scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
 			<view class="shop-list">
 				<block wx:for="{{devicesList}}">
-					<view class="shop-item clearfix">
-							<view class="shop-item-info">
-								<view class="shop-item-top">
-									<view class="shop-name">{{item.dateTime}}-{{item.remark}}</view>
-								</view>
-								<view class="shop-item-bottom">
-									<navigator class="blue-button link-btn" url="/pages/goods/goods?deliveryId={{item.id}}" hover-class="none">选货</navigator>
-								</view>
-							</view>
-					</view>
+          <view class="user-item-list">
+            <view class="user-item">
+              <navigator class="user-item-link" url="/pages/goods/goods?deliveryId={{item.id}}" hover-class="none">
+                <view class="item-name">{{item.dateTime}}-{{item.remark}}</view>
+                <image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
+              </navigator>
+            </view>
+          </view>
 				</block>
 			</view>
+      
 		</scroll-view>
 	</view>
 

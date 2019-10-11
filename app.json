@@ -1,21 +1,12 @@
 {
   "pages": [
+    
     "pages/device-list/device-list",
     "pages/product-delivery-list/product-delivery-list",
     "pages/goods/goods",
     "pages/product-list/product-list",
-    "pages/shop-list/shop-list",
     "pages/mine/mine",
-    "pages/shop-list/shop-goods/shop-goods",
-    "pages/goods-list/goods-list",
-    "pages/device-list/device-goods/device-goods",
-    "pages/goods-list-device/goods-list-device",
-    "pages/device-list/device-change/device-change",
-    
-    "pages/mine/device-record/device-record",
-    "pages/mine/device-detail/device-detail",
-    "pages/mine/shop-record/shop-record",
-    "pages/mine/shop-detail/shop-detail",
+    "pages/mine/history-delivery-item/history-delivery-item",
     "pages/login/login"
   ],
   "window": {
