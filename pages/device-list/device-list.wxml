@@ -25,7 +25,7 @@
 		</view>
 	</view>
 	<view wx:else>
-		<scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"
+		<scroll-view scroll-y style="height: 100%;"  scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"
 		 scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
 			<view class="shop-list">
 				<block wx:for="{{devicesList}}">

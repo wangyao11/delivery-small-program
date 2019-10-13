@@ -55,7 +55,7 @@
             <view class="title">购物车</view>
             <text class="empty" bindtap="empty">清空</text>
           </view>
-          <view class="list-content">
+          <scroll-view class="list-content" scroll-y="true">
             <view class="shopcart-food" wx:for="{{carArray}}">
               <text class="name">{{item.name}}</text>
               <!--cartControl-->
@@ -72,7 +72,7 @@
               </view>
               <!--cartControl-->
             </view>
-          </view>
+          </scroll-view>
         </view>
       </view>
     </view>
