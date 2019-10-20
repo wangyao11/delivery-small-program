@@ -51,13 +51,13 @@ Page({
 			wx.showToast({
 				title:'登录成功',
 				icon:'success',
-				duration:2000
+				duration:1000
 			})
 			setTimeout(function() {
 				wx.switchTab({
           url: '/pages/device-list/device-list'
 				})
-			}, 2000);
+			}, 1000);
 		}).catch(error=>{
 			wx.showToast({
 				title:'登录失败',

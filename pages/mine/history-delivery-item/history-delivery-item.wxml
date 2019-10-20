@@ -31,8 +31,9 @@
 				<block wx:for="{{devicesList}}">
           <view class="user-item-list">
             <view class="user-item">
-              <navigator class="user-item-link" url="/pages/goods/goods?deliveryId={{item.id}}" hover-class="none">
+              <navigator class="user-item-link" url="/pages/mine/history-delivery-desc/history-delivery-desc?deliveryId={{item.id}}" hover-class="none">
                 <view class="item-name">{{item.dateTime}}-{{item.remark}}</view>
+                <view class='num' wx:if="{{item.productCount > 0}}">{{item.productCount}}</view>
                 <image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
               </navigator>
             </view>
@@ -41,5 +42,4 @@
 			</view>
 		</scroll-view>
 	</view>
-
 </view>

@@ -34,7 +34,16 @@ function fetch({ url,data = '',method='POST' }){
 							}
 							//成功
 							resolve(res.data)
-						}else {
+            } else if (res.statusCode == 401){
+              wx.showToast({
+                title: res.data.message,
+                icon: 'none'
+              })
+              wx.clearStorage();
+              wx.reLaunch({
+                url: '/pages/login/login'
+              })
+            }else {
 							wx.showToast({
 								title:res.data.message,
 								icon:'none'

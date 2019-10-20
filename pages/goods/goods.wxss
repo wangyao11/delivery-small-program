@@ -1,5 +1,14 @@
 /* pages/goodss/goodss.wxss */
 
+.box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+}
+
 .goods {
   display: flex;
   position: absolute;
@@ -50,7 +59,7 @@
   width: 80px;
   vertical-align: middle;
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
   border-bottom:1px solid rgba(7,17,27,0.1);
   padding: 10px;
 
@@ -94,8 +103,8 @@
 
 .goods .foods-wrapper .food-list .food-item .content .name {
   margin: 2px 0 8px 0;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 20px;
+  line-height: 20px;
   height: 14px;
   color: rgb(7, 17, 27);
 }
@@ -163,8 +172,8 @@
 .goods .foods-wrapper .food-list .food-item .content .cartControl-wrapper .cartControl .cart-decrease,
 .cart-add .inner {
   display: inline-block;
-  line-height: 24px;
-  font-size: 24px;
+  line-height: 40px;
+  font-size: 40px;
   vertical-align: top;
   color: rgb(0, 160, 220, 0.2);
 }
@@ -182,20 +191,20 @@
 
 .goods .foods-wrapper .food-list .food-item .content .cartControl-wrapper .cartControl .cart-count {
   display: inline-block;
-  font-size: 10px;
-  line-height: 24px;
-  width: 12px;
+  font-size: 14px;
+  line-height: 40px;
+  width: 40px;
   vertical-align: top;
   padding-top: 6px;
   text-align: center;
-  color: rgb(147, 153, 159);
+  color: rgb(0, 0, 0);
 }
 
 .goods .foods-wrapper .food-list .food-item .content .cartControl-wrapper .cartControl .cart-add {
   display: inline-block;
   padding: 6px;
-  line-height: 24px;
-  font-size: 24px;
+  line-height: 40px;
+  font-size: 40px;
   vertical-align: top;
   color: rgb(0, 160, 220, 0.2);
 }
@@ -206,7 +215,6 @@
   position: fixed;
   left: 0px;
   bottom: 0px;
-  z-index: 50;
   width: 100%;
   height: 48px;
 }
@@ -377,22 +385,21 @@
 }
 
 .shopCart .shopcart-list .list-content {
-  padding: 0 18px;
-  max-height: 500px;
+  max-height: 400px;
   overflow: hidden;
   background: #fff;
+  z-index: 10;
 }
 
 .shopCart .shopcart-list .list-content .shopcart-food {
-  position: relative;
-  padding: 12px 0;
-  box-sizing: border-box;
+  padding: 12px 18px;
+  display: block;
   /*border-top: 1px solid rgba(7,17,27,0.1);*/
 }
 
 .shopCart .shopcart-list .list-content .shopcart-food .name {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px;
   color: rgb(7, 17, 27);
 }
 
@@ -407,8 +414,7 @@
 }
 
 .shopCart .shopcart-list .list-content .shopcart-food .cartControl-wrapper {
-  position: absolute;
-  right: 0;
+  float: right;
   bottom: 6px;
 }
 

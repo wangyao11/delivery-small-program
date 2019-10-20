@@ -59,7 +59,7 @@ page {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding:50rpx;
+	padding:30rpx;
 }
 .item-icon {
 	width:56rpx;
@@ -84,24 +84,9 @@ page {
 }
 .item-name {
 	flex: 1;
-	font-size: 28rpx;
+	font-size: 30rpx;
 	color:#333333;
 }
 .right-more {
 	width:14rpx;
-}
-
-.num {
-  float: right;
-  width: 24px;
-  height: 24px;
-  margin-right: 20px;
-  line-height: 24px;
-  text-align: center;
-  border-radius: 16px;
-  font-size: 9px;
-  font-weight: 700;
-  color: #fff;
-  background: rgb(240, 20, 20);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }

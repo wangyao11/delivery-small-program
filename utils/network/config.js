@@ -3,14 +3,15 @@
  */
 const api = {
 	// base_url:'http://47.99.169.112:8501',
-	base_url:'http://127.0.0.1:8888',
-	image_url:'http://127.0.0.1:8888/images/',
+  base_url:'http://api.yfbrothers.cn',
+  image_url:'http://api.yfbrothers.cn/images/',
 	login:'/wechat/user/login',
 	getProductClassList:'/wechat/product/getClasslist',
 	getProductList:'/wechat/product/list',
 	getDeliveryItems:'/wechat/deliveryItem/list',
   getDeliveryItemByOld: '/wechat/deliveryItem/oldList',
 	addProductToDelivery:'/wechat/deliveryUserProduct/add',
+  listByDeviceItemId:'/wechat/deliveryUserProduct/listByDeviceItemId',
 	userInfo:'/api/userInfo',
 	listShopsBySuppierId:'/api/listShopsBySuppierId', //根据补货员获取列表店铺
 	shopRecvRecords:'/api/shopRecvRecords', //店铺收餐

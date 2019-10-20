@@ -45,6 +45,9 @@
 						</navigator>
 					</view>
 				</view>
+        <view class="button-area">
+          <view class="button" bindtap="logout">退出登录</view>
+        </view>
 			</view>
 		</view>
 	</view>

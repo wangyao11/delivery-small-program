@@ -33,6 +33,12 @@ Page({
 			remind: ''
 		})
 	},
+  logout: function(e) {
+    wx.clearStorage();
+    wx.reLaunch({
+      url: '/pages/login/login'
+    })
+  },
 	onload: function() {
 		this.onLoad();
 	}

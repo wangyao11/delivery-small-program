@@ -34,10 +34,16 @@ Page({
       var name = this.data.goodsWrap[parentIndex].goods[index].name;
       var unit = this.data.goodsWrap[parentIndex].goods[index].type;
       var obj = { unit: unit, num: num, mark: mark, name: name, index: index, parentIndex: parentIndex };
-      var carArray1 = this.data.carArray.filter(item => item.mark != mark);
-      if (num > 0) {
-        carArray1.push(obj);
-        console.log(carArray1);
+      var carArray1 = [];
+      for (let i = 0; i< this.data.carArray.length;i++) {
+        let item = this.data.carArray[i];
+        if(item.mark == mark) {
+          if (num > 0) {
+            carArray1.push(obj)
+          }
+        } else {
+          carArray1.push(item);
+        }
       }
       this.setData({
         carArray: carArray1,
@@ -77,8 +83,21 @@ Page({
       var unit = this.data.goodsWrap[parentIndex].goods[index].type;
       var obj = { unit:unit ,num: num, mark: mark, name: name, index: index, parentIndex: parentIndex };
       var carArray1 = this.data.carArray.filter(item => item.mark != mark)
-      carArray1.push(obj)
-      console.log(carArray1);
+      if(num == 1) {
+        carArray1.push(obj)
+      }else{
+        var carArray1 = [];
+        for (let i = 0; i < this.data.carArray.length; i++) {
+          let item = this.data.carArray[i];
+          if (item.mark == mark) {
+            if (num > 0) {
+              carArray1.push(obj)
+            }
+          } else {
+            carArray1.push(item);
+          }
+        }
+      }
       this.setData({
         carArray: carArray1,
         goodsWrap: this.data.goodsWrap
@@ -259,5 +278,8 @@ Page({
     }).then(function (res) {
       
     });
+  },
+  preventTouchMove:function(){
+    return;
   }
 })

@@ -25,17 +25,15 @@
 		</view>
 	</view>
 	<view wx:else>
-		<scroll-view scroll-y style="height: 100%;"  scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"
+		<scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"
 		 scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
 			<view class="shop-list">
 				<block wx:for="{{devicesList}}">
           <view class="user-item-list">
             <view class="user-item">
-              <navigator class="user-item-link" url="/pages/goods/goods?deliveryId={{item.id}}" hover-class="none">
-                <view class="item-name">{{item.dateTime}}-{{item.remark}}</view>
-                <view class='num' wx:if="{{item.productCount > 0}}">{{item.productCount}}</view>
-                <image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
-              </navigator>
+              <view class="user-item-link">
+                <view class="item-name">{{item.productName}}-{{item.totalCount}}{{item.productType}}</view>
+              </view>
             </view>
           </view>
 				</block>
