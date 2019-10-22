@@ -21,8 +21,8 @@
       {
         "pagePath":"pages/device-list/device-list",
         "text":"配送单",
-        "iconPath":"images/nav/navIcon2.png",
-        "selectedIconPath":"images/nav/navIcon2_s.png"
+        "iconPath":"images/nav/navIcon1.png",
+        "selectedIconPath":"images/nav/navIcon1_s.png"
       },
       {
         "pagePath":"pages/mine/mine",
@@ -32,7 +32,8 @@
       }
     ],
     "color":"#666",
-    "selectedColor":"#fd8003"
-  },
-  "sitemapLocation": "sitemap.json"
+    "selectedColor":"#fd8003",
+    "borderStyle":"white",
+    "backgroundColor":"#fbfafa"
+  }
 }

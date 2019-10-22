@@ -40,7 +40,7 @@
 							<view class="item-icon item-icon1">
 								<image mode="widthFix" src="/images/index/buhuoIcon.png"></image>
 							</view>
-							<view class="item-name">我的历史选货单</view>
+							<view class="item-name">历史选货单</view>
 							<image class="right-more" mode="widthFix" src="/images/index/rightArr.png"></image>
 						</navigator>
 					</view>

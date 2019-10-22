@@ -29,8 +29,8 @@ Page({
     var that = this;
     const date = new Date()
     const hour = date.getHours();
-    if(hour < 16) {
-      date.setTime(date.getTime() - 3600 * 1000 * 24);
+    if(hour >= 14) {
+      date.setTime(date.getTime() + 3600 * 1000 * 24);
     }
     var ajaxData = {
       endTime: util.formatTimeTwo(date, "Y-M-D")

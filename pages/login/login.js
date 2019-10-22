@@ -46,6 +46,7 @@ Page({
 			app.globalData.userlogin = true;
       app.globalData.userId = res.value.id;
 			wx.setStorageSync('userId', res.value.id);
+      wx.setStorageSync('userInfo', res.value);
 			wx.setStorageSync('userlogin', true);
 			wx.setStorageSync('token', res.value.token);
 			wx.showToast({

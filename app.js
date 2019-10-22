@@ -66,7 +66,7 @@ App({
     userlogin:wx.getStorageSync('userlogin'),
     userId:wx.getStorageSync('userId'),
 	  wxUserInfo:wx.getStorageSync('wxUserInfo'),
-	  imageUrlPath:'http://47.99.169.112:8501/storage/'
+    imageUrlPath:'https://api.yfbrothers.cn/images/'
   },
   redirect: function (url, param) {
     wx.navigateTo({

@@ -5,7 +5,7 @@ page {
 	background-color: #eeeeee;
 } 
 .container {
-	padding-top: 200rpx;
+	padding-top: 100rpx;
 }
 .background {
   width:100%;
@@ -14,8 +14,8 @@ page {
   top:0;
 }
 .logo {
-	width:160rpx;
-	height: 160rpx;
+	width:300rpx;
+	height: 300rpx;
 	background-color: #fff;
 	display: flex;
 	align-items: center;
@@ -23,7 +23,7 @@ page {
 	border-radius:20rpx;
 	overflow: hidden;
 	margin:0 auto;
-	margin-bottom:160rpx;
+	margin-bottom:100rpx;
 }
 .logoImage {
 	width:100%;
@@ -84,12 +84,18 @@ page {
 	margin-top:12rpx;
 }
 .button-area {
-	margin-top:100rpx;
+	margin-top:50rpx;
+  margin-bottom: 50rpx;
+  width: 100%;
+  text-align:center;
+  display: block;
 }
+
 .button {
 	width:400rpx;
 	height: 100rpx;
-	display: flex;
+  line-height: 100rpx;
+	display: inline-block;
 	align-items: center;
 	justify-content: center;
 	border-radius:100rpx;
@@ -99,7 +105,7 @@ page {
 	background-color: transparent;
 	font-size: 34rpx;
 	color:#fff;
-	background: linear-gradient(to right,#ff8355,#fe592f);
+	background: linear-gradient(to right,#55bbff,#358af8);
 	box-shadow: 0px 8rpx 10rpx #ffcdc0;
 }
 .button::after {

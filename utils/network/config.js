@@ -3,8 +3,8 @@
  */
 const api = {
 	// base_url:'http://47.99.169.112:8501',
-  base_url:'http://api.yfbrothers.cn',
-  image_url:'http://api.yfbrothers.cn/images/',
+  base_url:'https://api.yfbrothers.cn',
+  image_url:'https://api.yfbrothers.cn/images/',
 	login:'/wechat/user/login',
 	getProductClassList:'/wechat/product/getClasslist',
 	getProductList:'/wechat/product/list',

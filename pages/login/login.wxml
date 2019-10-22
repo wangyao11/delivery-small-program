@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <image class="background" mode="widthFix" src="/images/login/loginBg.png"></image>
+  <!-- <image class="background" mode="widthFix" src="/images/login/loginBg.png"></image> -->
 	<view class="logo">
 		<image class="logoImage" mode="widthFix" src="/images/login/logo.jpg"></image>
 	</view>
@@ -10,7 +10,7 @@
 				<view class="section__title">
 					<image class="phone-icon" mode="widthFix" src="/images/login/phoneIcon.png"></image>
 				</view>
-				<input focus="{{autoFocus}}" class="phone-input" name="account" placeholder="用户名/邮箱/手机号" />
+				<input focus="{{autoFocus}}" class="phone-input" name="account" placeholder="手机号" />
 			</view>
 			<view class="section section_gap margin-top">
 				<view class="section__title">

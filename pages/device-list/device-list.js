@@ -27,19 +27,21 @@ Page({
     
     const startDate = new Date()
     const hour = startDate.getHours();
-    if (hour > 12) {
+    if (hour > 14) {
+      startDate.setTime(startDate.getTime() + 3600 * 1000 * 24 * 2);
+    } else {
       startDate.setTime(startDate.getTime() + 3600 * 1000 * 24);
     }
     const endDate = new Date()
-    endDate.setTime(endDate.getTime() + 3600 * 1000 * 24 * 7);
-    // var ajaxData = {
-    //   startTime: util.formatTimeTwo(startDate, "Y-M-D"),
-    //   endTime: util.formatTimeTwo(endDate, "Y-M-D")
-    // }
+    endDate.setTime(endDate.getTime() + 3600 * 1000 * 24 * 10);
     var ajaxData = {
-      startTime: "2019-08-27",
-      endTime: "2019-09-30"
+      startTime: util.formatTimeTwo(startDate, "Y-M-D"),
+      endTime: util.formatTimeTwo(endDate, "Y-M-D")
     }
+    // var ajaxData = {
+    //   startTime: "2019-08-27",
+    //   endTime: "2019-09-30"
+    // }
   	request.fetch({
       url:api.getDeliveryItems,
       data:ajaxData

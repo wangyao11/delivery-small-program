@@ -14,6 +14,7 @@ Page({
       deliveryId : 0,
       categories: [],
       goodsWrap: [],
+      dateTime:'',
       image_url: api.image_url
     },
     selectMenu: function (e) {
@@ -155,14 +156,24 @@ Page({
   },
   onLoad: function (options) {
     this.setData({
-      deliveryId: options.deliveryId
+      deliveryId: options.deliveryId,
+      dateTime:options.dateTime
     })
   },
   onReady: function () {
       // 页面渲染完成
   },
   onShow: function () {
-    console.log(app.globalData.userlogin)
+    var date = new Date();
+    var nowDate = new Date(this.data.dateTime);
+    var dateTime = date.getTime() + 3600 * 1000 * 10;
+    var oldDateTime = date.getTime() - 3600 * 1000 * 24 * 10;
+    var nowDateTime = nowDate.getTime();
+    if (dateTime > nowDateTime && nowDate > oldDateTime) {
+      wx.reLaunch({
+        url: '/pages/device-list/device-list'
+      })
+    }
     if (app.globalData.userlogin == '') {
       wx.redirectTo({
         url: '/pages/login/login'

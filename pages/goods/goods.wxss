@@ -254,7 +254,7 @@
   font-size: 9px;
   font-weight: 700;
   color: #fff;
-  background: rgb(240, 20, 20);
+  background: #fd8003;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
