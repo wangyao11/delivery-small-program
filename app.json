@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/device-list/device-list",
     "pages/product-delivery-list/product-delivery-list",
     "pages/goods/goods",
@@ -16,24 +15,25 @@
     "navigationBarTitleText": "配送小程序",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "list":[
+  "tabBar": {
+    "list": [
       {
-        "pagePath":"pages/device-list/device-list",
-        "text":"配送单",
-        "iconPath":"images/nav/navIcon1.png",
-        "selectedIconPath":"images/nav/navIcon1_s.png"
+        "pagePath": "pages/device-list/device-list",
+        "text": "配送单",
+        "iconPath": "images/nav/navIcon1.png",
+        "selectedIconPath": "images/nav/navIcon1_s.png"
       },
       {
-        "pagePath":"pages/mine/mine",
-        "text":"我的",
-        "iconPath":"images/nav/navIcon3.png",
-        "selectedIconPath":"images/nav/navIcon3_s.png"
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/nav/navIcon3.png",
+        "selectedIconPath": "images/nav/navIcon3_s.png"
       }
     ],
-    "color":"#666",
-    "selectedColor":"#fd8003",
-    "borderStyle":"white",
-    "backgroundColor":"#fbfafa"
-  }
+    "color": "#666",
+    "selectedColor": "#fd8003",
+    "borderStyle": "white",
+    "backgroundColor": "#fbfafa"
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -165,11 +165,13 @@ Page({
   },
   onShow: function () {
     var date = new Date();
+    console.log(date);
     var nowDate = new Date(this.data.dateTime);
-    var dateTime = date.getTime() + 3600 * 1000 * 10;
-    var oldDateTime = date.getTime() - 3600 * 1000 * 24 * 10;
+    console.log(nowDate);
+    //(当前时间加12小时，超过12点后不能修改配送单，时区问题加8小时)
+    var dateTime = date.getTime() + 3600 * 1000 * 20;
     var nowDateTime = nowDate.getTime();
-    if (dateTime > nowDateTime && nowDate > oldDateTime) {
+    if (dateTime > nowDateTime) {
       wx.reLaunch({
         url: '/pages/device-list/device-list'
       })

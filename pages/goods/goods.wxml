@@ -26,7 +26,7 @@
                 <view class="cart-decrease" wx:if="{{good.count > 0}}" data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="decreaseCart">
                   <view class="inner iconfont icon-jian" style="font-size:40px;color:#00A0DC;"></view>
                 </view>
-                <view class="cart-count" wx:if="{{good.count > 0 }}"><input value="{{good.count}}" class="phone-input" name="account" placeholder="手机号" />{{good.type}}</view>
+                <view class="cart-count" wx:if="{{good.count > 0 }}">{{good.count}}{{good.type}}</view>
                 <view class=" iconfont icon-jia cart-add " style="color:#00A0DC; " data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="addCart"></view>
               </view>
             </view>
