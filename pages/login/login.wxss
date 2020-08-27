@@ -75,6 +75,7 @@ page {
 	color:#333333;
 	height: 50rpx;
 	line-height: 48rpx;
+  -webkit-user-select:auto;
 }
 .section_gap {
 	padding:20rpx 10rpx;

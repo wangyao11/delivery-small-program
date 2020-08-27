@@ -10,13 +10,13 @@
 				<view class="section__title">
 					<image class="phone-icon" mode="widthFix" src="/images/login/phoneIcon.png"></image>
 				</view>
-				<input focus="{{autoFocus}}" class="phone-input" name="account" placeholder="手机号" />
+				<input focus="{{autoFocus}}" style='index:1000' class="phone-input" name="account" placeholder="手机号" />
 			</view>
 			<view class="section section_gap margin-top">
 				<view class="section__title">
 					<image class="psd-icon" mode="widthFix" src="/images/login/psdIcon.png"></image>
 				</view>
-				<input class="phone-input" password="{{is_pwd}}" name="password" placeholder="请输入密码" />
+				<input class="phone-input" style='index:1000' password="{{is_pwd}}" name="password" placeholder="请输入密码" />
 				<view class="section__btn" bindtap="togglePwd">
 					<image class="eye-icon" wx:if="{{!is_pwd}}" mode="widthFix" src="/images/login/eyeIcon.png"></image>
 					<image class="eye-icon-close" wx:else mode="widthFix" src="/images/login/eyeIconClose.png"></image>
@@ -27,9 +27,5 @@
 				<button class="button red-button" form-type="submit">登录</button>
 			</view>
 		</form>
-		<view class="login-tips">
-			<image class="qeustionImage" mode="widthFix" src="/images/login/questionIcon.png"></image>
-			<text>登录如遇问题请联系客服</text>
-		</view>
 	</view>
 </view>

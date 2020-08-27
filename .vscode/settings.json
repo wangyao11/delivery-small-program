@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.jsp": "java",
+        "*.wxml": "html",
+        "*.wxss": "css"
+    }
+}

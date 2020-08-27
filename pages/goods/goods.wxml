@@ -1,82 +1,95 @@
 <!--pages/order/order.wxml-->
 <view class="goods" wx:if="{{status==0||item.status==status}}">
-  <view class="menu-wrapper">
-    <scroll-view style="height: 450px;">
-      <view wx:for="{{categories}}" class="menu-item border-1px"  data-item-index="{{index}}">
-        <view class="text" data-id="{{item.scrollId}}" id="{{item.scrollId}}" bindtap="selectMenu">
-          {{item.name}}
-        </view>
-      </view>
-    </scroll-view>
-  </view>
-  <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="foods-wrapper">
-    <view wx:for="{{goodsWrap}}" class="food-list food-list-hook" wx:for-index="parentIndex">
-      <view id="{{item.scrollId}}" class="title">{{item.name}}</view>
-      <view wx:for="{{item.goods}}" class="food-item" wx:for-item="good" data-food="{{good}}">
-        <view class="icon">
-          <image src="{{image_url + good.imageUrl}}" style="width: 65px;height: 65px"></image>
-        </view>
-        <view class="content">
-          <view class="name">{{good.name}}</view>
-          <view class="desc">{{good.remark}}</view>
-          <!--cartControl-->
-          <view class="cartControl-wrapper">
-            <view class="cartControl">
-              <view name="fade">
-                <view class="cart-decrease" wx:if="{{good.count > 0}}" data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="decreaseCart">
-                  <view class="inner iconfont icon-jian" style="font-size:40px;color:#00A0DC;"></view>
+    <view class="menu-wrapper">
+        <scroll-view style="height: 450px;">
+            <view wx:for="{{categories}}" class="menu-item border-1px" data-item-index="{{index}}">
+                <view class="text" data-id="{{item.scrollId}}" id="{{item.scrollId}}" bindtap="selectMenu">
+                    {{item.name}}
                 </view>
-                <view class="cart-count" wx:if="{{good.count > 0 }}">{{good.count}}{{good.type}}</view>
-                <view class=" iconfont icon-jia cart-add " style="color:#00A0DC; " data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="addCart"></view>
-              </view>
             </view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </scroll-view>
-
-  <!--shopCart-->
-  <view>
-    <view class="box" style="display:{{cartShow}}" catchtouchmove='preventTouchMove' bindtap="toggleList"></view>
-    <view class="shopCart" >
-      <view class="content" bindtap="toggleList">
-        <view class="content-left">
-          <view class="logo-wrapper">
-            <view class="logo highlight">
-              <view class="iconfont icon-gouwuche highlight"></view>
-            </view>
-            <view class="num" wx:if="{{totalCount > 0}}">{{totalCount}}</view>
-          </view>
-        </view>
-      </view>
-      <view class="shopcart-list" style="display:{{cartShow}};">
-        <view class="list-header">
-          <view class="title">配送清单</view>
-          <!-- <text class="empty" bindtap="empty">清空</text> -->
-        </view>
-        <scroll-view class="list-content" catchtouchmove='preventTouchMove' scroll-y="true">
-          <view class="shopcart-food" wx:for="{{carArray}}">
-            <text class="name">{{item.name}}</text>
-            <!--cartControl-->
-            <view class="cartControl-wrapper" style="bottom:10px;" wx:if="{{item.num > 0}}">
-              <view class="cartControl" style="width:120px;">
-                <view name="fade">
-                  <view class="cart-decrease" style="display:inline-block;" data-item-index="{{item.index}}" data-parentIndex="{{item.parentIndex}}" catchtap="decreaseShopCart">
-                    <view class="inner iconfont icon-jian" style="font-size:30px;color:#00A0DC;"></view>
-                  </view>
-                  <view class="cart-count" style="display:inline-block;width:50px;text-align:center;font-size:16px;">{{item.num}}{{item.unit}}</view>
-                  <view class=" iconfont icon-jia cart-add " style="font-size:30px;color:#00A0DC; padding:0;" data-item-index="{{item.index}}" data-parentIndex="{{item.parentIndex}}" catchtap="addShopCart"></view>
-                </view>
-              </view>
-            </view>
-            <!--cartControl-->
-          </view>
         </scroll-view>
-      </view>
     </view>
-  </view>
-  <view name="fade">
-    <view class="list-mask" wx:if="{{listShow}}" bindtap="hideList"></view>
-  </view>
+    <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="foods-wrapper">
+        <view wx:for="{{goodsWrap}}" class="food-list food-list-hook" wx:for-index="parentIndex">
+            <view id="{{item.scrollId}}" class="title">{{item.name}}</view>
+            <view wx:for="{{item.goods}}" class="food-item" wx:for-item="good" data-food="{{good}}">
+                <view class="icon">
+                    <image lazy-load='true' src="{{image_url + good.imageUrl}}" style="width: 65px;height: 65px"></image>
+                </view>
+                <view class="content">
+                    <view class="name">{{good.name}}</view>
+                    <view class="desc">{{good.remark}}</view>
+                    <!--cartControl-->
+                    <view class="cartControl-wrapper">
+                        <view class="cartControl">
+                            <view name="fade">
+                                <view class="cart-decrease" wx:if="{{good.count > 0}}" data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="decreaseCart">
+                                    <view class="inner iconfont icon-jian" style="font-size:40px;color:#00A0DC;"></view>
+                                </view>
+                                <view class="cart-count" data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap='updateCount' wx:if="{{good.count > 0 }}">{{good.count}}{{good.type}}</view>
+                                <view class=" iconfont icon-jia cart-add " style="color:#00A0DC; " data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="addCart"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+
+    <!--shopCart-->
+    <view>
+        <view class="box" style="display:{{cartShow}}" catchtouchmove='preventTouchMove' bindtap="toggleList"></view>
+        <view class="shopCart">
+            <view class="content" bindtap="toggleList">
+                <view class="content-left">
+                    <view class="logo-wrapper">
+                        <view class="logo highlight">
+                            <view class="iconfont icon-gouwuche highlight"></view>
+                        </view>
+                        <view class="num" wx:if="{{totalCount > 0}}">{{totalCount}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="shopcart-list" style="display:{{cartShow}};">
+                <view class="list-header">
+                    <view class="title">配送清单</view>
+                    <!-- <text class="empty" bindtap="empty">清空</text> -->
+                </view>
+                <scroll-view class="list-content" catchtouchmove='preventTouchMove' scroll-y="true">
+                    <view class="shopcart-food" wx:for="{{carArray}}">
+                        <text class="name">{{item.name}}</text>
+                        <!--cartControl-->
+                        <view class="cartControl-wrapper" style="bottom:10px;" wx:if="{{item.num > 0}}">
+                            <view class="cartControl" style="width:120px;">
+                                <view name="fade">
+                                    <view class="cart-decrease" style="display:inline-block;" data-item-index="{{item.index}}" data-parentIndex="{{item.parentIndex}}" catchtap="decreaseShopCart">
+                                        <view class="inner iconfont icon-jian" style="font-size:30px;color:#00A0DC;"></view>
+                                    </view>
+                                    <view class="cart-count" catchtap='updateCount' data-item-index="{{item.index}}" data-parentIndex="{{item.parentIndex}}" style="display:inline-block;width:50px;text-align:center;font-size:16px;">{{item.num}}{{item.unit}}</view>
+                                    <view class=" iconfont icon-jia cart-add " style="font-size:30px;color:#00A0DC; padding:0;" data-item-index="{{item.index}}" data-parentIndex="{{item.parentIndex}}" catchtap="addShopCart"></view>
+                                </view>
+                            </view>
+                        </view>
+                        <!--cartControl-->
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+    <view name="fade">
+        <view class="list-mask" wx:if="{{listShow}}" bindtap="hideList"></view>
+    </view>
+
+    <view class="fadeIn" wx:if="{{updateCountFocus}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+            <view class="weui-dialog__bd">
+                <input type='number' focus="true" placeholder='请输入数量' bindinput='setValue' data-name='stuEidtName'></input>
+            </view>
+            <view class="weui-dialog__ft">
+                <a class="weui-dialog__btn weui-dialog__btn_default" bindtap="cancel">取消</a>
+                <a class="weui-dialog__btn weui-dialog__btn_primary" bindtap="confirmAcceptance">确定</a>
+            </view>
+        </view>
+    </view>
 </view>

@@ -30,7 +30,7 @@
         "selectedIconPath": "images/nav/navIcon3_s.png"
       }
     ],
-    "color": "#666",
+    "color": "#666666",
     "selectedColor": "#fd8003",
     "borderStyle": "white",
     "backgroundColor": "#fbfafa"
