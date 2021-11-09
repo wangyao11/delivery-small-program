@@ -29,7 +29,7 @@ Page({
     var that = this;
     const date = new Date()
     const hour = date.getHours();
-    if(hour >= 12) {
+    if(hour >= 10) {
       date.setTime(date.getTime() + 3600 * 1000 * 24);
     }
     var ajaxData = {

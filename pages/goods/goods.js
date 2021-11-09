@@ -180,7 +180,7 @@ Page({
         var nowDate = new Date(this.data.dateTime);
         console.log(nowDate);
         //(当前时间加12小时，超过12点后不能修改配送单，时区问题加8小时)
-        var dateTime = date.getTime() + 3600 * 1000 * 20;
+        var dateTime = date.getTime() + 3600 * 1000 * 22;
         var nowDateTime = nowDate.getTime();
         if (dateTime > nowDateTime) {
             wx.reLaunch({

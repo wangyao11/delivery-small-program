@@ -28,7 +28,7 @@ Page({
     const startDate = new Date()
     const hour = startDate.getHours();
     console.log("小时：" + hour);
-    if (hour >= 12) {
+    if (hour >= 10) {
       startDate.setTime(startDate.getTime() + 3600 * 1000 * 24 * 2);
     } else {
       startDate.setTime(startDate.getTime() + 3600 * 1000 * 24);
